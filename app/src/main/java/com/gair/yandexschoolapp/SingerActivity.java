@@ -106,13 +106,10 @@ public class SingerActivity extends AppCompatActivity {
 
         for (int i = 0; i < genres.length; i++) {
             TextView genreTextView = new TextView(this);
-            genreTextView.setGravity(Gravity.CENTER_HORIZONTAL);
 
             String genre = genres[i] + ", ";
-
             SpannableString string = new SpannableString(genre);
             string.setSpan(new ForegroundColorSpan(Color.DKGRAY), genre.length() - 2, genre.length() - 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
             if (i == genres.length - 1)
                 genre = string.toString().substring(0, genre.length() - 2);
 
